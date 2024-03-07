@@ -7,7 +7,7 @@ const login = async (req, res) => {
 		const result = loginService.validateBody(req.body);
 		return res.status(400).json({ message: result });
 	}
-
+	//marcos
 	const validate = await loginService.validateLogin(email, password);
 	if (validate.message === 'Invalid fields') {
 		return res.status(404).json(validate);
